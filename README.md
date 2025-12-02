@@ -1,6 +1,6 @@
 # 운영 방안
 1. 하루 수업 내용 복습
 2. 이미 나와 있는 오픈 소스 복습
-3. Kann Academy Math 공부
+3. Kahn Academy Math 공부
 4. 일본어 공부
 5. +a 백준 코드 문제 풀기
