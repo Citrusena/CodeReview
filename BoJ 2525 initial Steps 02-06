@@ -1,0 +1,15 @@
+Title : 오븐 시계
+
+A, B = map(int, input().split())
+C = int(input())
+
+D = C + B
+
+while D >= 60:
+    A += 1
+    D -= 60
+
+if A >= 24:
+    A -= 24
+
+print(A, D)

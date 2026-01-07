@@ -1,0 +1,31 @@
+Title : 사칙연산
+모든 연산 문제
+
+입력 : 두 자연수 A와 B가 주어진다
+출력 : 첫째 줄에 A+B, 둘째 줄에 A-B, 셋째 줄에 A*B, 넷째 줄에 A/B, 다섯째 줄에 A%B를 출력한다
+예제 입력 1: 7 3
+예제 출력 1:
+10
+4
+21
+2
+1
+
+알고리즘 분류
+- 수학
+- 구현
+- 사칙연산
+
+내 제출
+# ver 1
+a, b = map(int, input().split())
+print(a+b)
+print(a-b)
+print(a*b)
+print(a//b)
+print(a%b)
+
+# ver 2
+import sys
+a, b = map(int, sys.stdin.readline().split())
+sys.stdout.write(f"{a+b}\n{a-b}\n{a*b}\n{a//b}\n{a%b}")
