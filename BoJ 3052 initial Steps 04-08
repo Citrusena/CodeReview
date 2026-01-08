@@ -25,7 +25,6 @@ N = map(int, sys.stdin.readline().split()\n)
 sys.stdout.write(f'{N%42}')
 
 claude ai 알려준 거
-N = int(input())
-for _ in range(N):
+for _ in range(10):
     num = int(input())
     print(num % 42)
