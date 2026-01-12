@@ -1,0 +1,18 @@
+Title : 조건에 부합하는 중고거래 댓글 조회하기 Lv.1
+select
+
+ver 1 
+select UGB.TITLE, UGB.BOARD_ID, UGR.REPLY_ID, UGR.WRITER_ID, UGR.CONTENTS, to_char(UGR.CREATED_DATE, 'yyyy-mm-dd') as CREATED_DATE
+from USED_GOODS_BOARD UGB, USED_GOODS_REPLY UGR
+where UGB.BOARD_ID = UGR.BOARD_ID
+  and to_char(UGB.CREATED_DATE, 'yyyy-mm') = '2022-10'
+order by UGR.CREATED_DATE, UGB.TITLE;
+
+ver 2 인라인뷰 사용 (연산량 줄이기)
+select title, gb.board_id, reply_id, gr.writer_id, contents, to_char(gr.created_date, 'yyyy-mm-dd') as created_date
+from
+    (select title, board_id, created_date from used_goods_board) gb,
+    (select board_id, reply_id, writer_id, contents, created_date from used_goods_reply) gr
+where gb.board_id = gr.board_id
+and to_char(gb.created_date, 'yyyy-mm')='2022-10'
+order by gr.created_date asc, title asc;
