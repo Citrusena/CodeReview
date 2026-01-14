@@ -30,7 +30,7 @@ N*M크기의 두 행렬 A와 B가 주어졌을 때, 두 행렬을 더하는 프�
 - 사칙연산
 
 내 제출
-N,M=map(int, input().split())
+N,M = map(int, input().split())
 A = [ ]
 for i in range(N):
     row = list(map(int, input().split()))
@@ -44,5 +44,5 @@ for i in range(M):
 for i in range(N):
     result = [ ]
     for j in range(M):
-        result.append(A[i][j] +B[i][j])
+        result.append(A[i][j] + B[i][j])
     print(' '.join(map(str, result)))
