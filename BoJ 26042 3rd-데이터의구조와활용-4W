@@ -1,0 +1,22 @@
+import sys
+import collections
+input = sys.stdin.readline
+
+n = int(input())
+q = collections.deque()
+res = [0, 0]
+
+for i in range(n):
+    a = list(map(int, input().split()))
+
+    if a[0] == 1:
+        q.append(a[1])
+
+    if res[0] < len(g):
+        res = [len(g), q[-1]]
+    elif res[0] == len(q):
+        res[1] = min(res[1], q[-1])
+    else :
+        q.popleft()
+
+print(*res)
